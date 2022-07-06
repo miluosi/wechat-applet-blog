@@ -1,0 +1,66 @@
+<!--pages/show/show.wxml-->
+<!--显示模块-->
+<wxs src="../../wxs/common.wxs" module="common"/>
+<view class="container">
+  <view class="title">{{dataOne.title}}</view>
+  <view class="info">作者：{{dataOne.author}} · 
+  时间：{{common.myDate(dataOne.posttime,1)}}</view>
+  <view class="main">
+    {{dataOne.content}}
+  </view>
+  <view class="imgGroup">
+    <image mode="widthFix" src="{{item}}" wx:key="index" wx:for="{{dataOne.picurl}}"></image>
+    
+  </view>
+  <view class="zanBox {{dataOne.zanShow?'active':''}}" bindtap="clickZan">
+    <image src="/images/zan.png"></image>
+    <view class="num">{{dataOne.like}}</view>
+  </view>  
+</view>
+
+
+
+
+
+
+<!--评论模块-->
+
+
+<view class="pingOut">
+
+<view class="pingTop">
+  <form class="myForm" bindsubmit="onSubmit">
+      <input value="{{iptVal}}" bindinput="iptChange" name="content" class="myIpt" placeholder="请输入评论内容..."></input>
+      <button disabled="{{btnShow}}" type="primary" size="mini" class="myBtn" form-type="submit">评论</button>
+  </form>
+</view>
+
+
+<view class="pingMain">
+  <view class="row" wx:for="{{pingData}}" wx:key="index">
+
+    <view class="rowTop">
+      <view class="user">
+        <image src="{{item.userInfo.avatarUrl}}"></image>
+        <view class="txt">{{item.userInfo.nickName}}</view>
+      </view>
+      <view class="time">
+        {{common.timesFun( item.posttime)}}
+      </view>
+    </view>
+
+
+    <view class="rowCon">
+    {{item.content}}
+    </view>
+  </view>
+</view>
+</view>
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+.container{ height: 100vh; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+.logo image{ width:800rpx; height: 500rpx;}
+
+.info{ padding-bottom:60rpx; color:#ff6768}
+
+.btnGroup{ padding-bottom:300rpx; width:100%;}
+.btnGroup button{width:100%; margin-bottom:20rpx;}
+

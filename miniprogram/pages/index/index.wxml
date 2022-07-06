@@ -1,0 +1,17 @@
+<wxs src="../../wxs/common.wxs" module="common"/>
+
+
+<navigator class="row" url="/pages/show/show?id={{item._id}}"  data-id="{{item._id}}" 
+data-idx="{{index}}" wx:for="{{blogs}}"  wx:key="index">
+  <view class="rowTxt">
+    <view class="title">{{common.getStrLen(item.title,100)}}</view>
+    <view class="info">
+        {{item.author}} - {{common.getMyNum(item.like)}}赞 - {{common.getMyNum(item.reviewnum)}}评 - 
+        {{common.timesFun(item.posttime)}}
+      </view>
+  </view>
+  <view class="rowPic">
+      <image mode="aspectFill" 
+      src="{{item.picurl?item.picurl[0]:'/images/nopic.jpg'}}" class="img"></image>
+    </view>
+</navigator>

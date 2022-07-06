@@ -1,0 +1,10 @@
+.idxCon{ padding:50rpx 30rpx}
+.row{ display: flex;border-bottom:1px solid #eee; padding:20rpx 0; height: 230rpx; justify-content: space-between;}
+.rowTxt{ height: 100%; width:60%}
+.rowTxt .title{ font-size:40rpx; height: 195rpx;}
+.rowTxt .info{ font-size:26rpx; color:#999}
+.rowPic{ height: 100%; width:37%;}
+.rowPic .img{ height: 100%; width:100%}
+
+
+

@@ -1,0 +1,6 @@
+<wxs module="common" src='../../wxs/common.wxs'/>
+<view class="container">
+  <navigator url="/pages/show/show?id={{item.nsid?item.nsid:item._id}}" class="row" wx:for="{{listData}}" wx:key="index">
+    {{common.getStrLen(item.title,35)}}
+  </navigator>
+</view>

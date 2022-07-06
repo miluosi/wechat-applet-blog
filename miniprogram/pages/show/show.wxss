@@ -1,0 +1,26 @@
+/* pages/show/show.wxss */
+.container{ padding:50rpx 30rpx;}
+.title{ font-size:46rpx; line-height: 1.4em;}
+.info{ font-size:28rpx; color:#999; padding:30rpx 0 50rpx;}
+.main{ font-size:36rpx; padding-bottom:30rpx;}
+.imgGroup{ width:100%;}
+.imgGroup image{ width:100%; display: block; margin-bottom:10rpx;}
+.zanBox{width:200rpx; height: 200rpx; background:#bbb; border-radius: 50%; margin:50rpx auto;  display: flex; justify-content: center; align-items: center; flex-direction: column;}
+.zanBox.active{ background: #00B26A;}
+
+.zanBox image{ width:40%; height: 40%; display: block;}
+.zanBox .num{ color:#fff;}
+
+.pingOut{  padding:0 30rpx;}
+.myForm{  display: block; overflow: hidden; position: relative;}
+.myIpt{ width:80%; height: 80rpx; background: #f1f1f1; padding:0 20rpx}
+.myBtn{ width:20%; height: 80rpx; position: absolute; right: 0; top:0;}
+.pingMain{ padding-top:30rpx;}
+.row{ padding:15rpx 0; border-bottom: 1rpx solid #efefef;}
+.rowTop{ display: flex; justify-content: space-between; align-items: center;}
+.rowTop .user{ display: flex; align-items: center; color:#333}
+.rowTop .user image{ width:80rpx; height: 80rpx; border-radius: 50%;margin-right: 20rpx;}
+.rowTop .user .txt{ font-size:34rpx;}
+.rowTop .time{ color:#999; font-size:28rpx;}
+
+.rowCon{ padding:10rpx  0 10rpx 100rpx; line-height: 1.6em; font-size:34rpx; color:#444}

@@ -1,0 +1,55 @@
+<view class="youkeOut" wx:if="{{admin}}">
+  <view class="ykHead">
+    <view class="pic">      
+      <block wx:if="{{userInfo}}"   >
+        <image src="{{userInfo.avatarUrl}}" bindtap="changeye"></image>
+      </block>      
+    </view>
+    <view class="username">
+      <block wx:if="{{userInfo}}">{{userInfo.nickName}}</block>
+      <block wx:else>暂未登录</block>      
+    </view>
+  </view>
+  <view class="ykMain">
+    <view class="ykCon" wx:if="{{userInfo}}">
+     
+      <navigator class="ykRow" url="/pages/detail/detail?type=zan">赞过的文章</navigator> 
+      <navigator class="ykRow" url="/pages/detail/detail?type=ping">我评论过的</navigator>      
+      <view class="ykRow" bindtap="changeye">发表博客</view>      
+
+    </view>    
+    <navigator wx:else class="noLogin" url="/pages/login/login">
+      <button type="primary">立即登录</button>
+    </navigator>    
+  
+  </view>
+</view>
+
+
+
+<view wx:else>
+  <form bindsubmit="onSubmit">
+    <input bindinput="iptChange" name="title" class="ipt" placeholder="请输入文章标题" />
+    <input bindinput="getauthor" name="author" class="ipt" placeholder="请输入文章作者"/>
+    <textarea bindinput="getcontent" name="content" class="area" placeholder="请输入文章内容">
+
+    </textarea>
+
+
+
+    <view class="upImg">
+      <view class="upImgBox" wx:for="{{tempPath}}" wx:key="index">
+          <image mode="aspectFill"  src="{{item}}" data-url="{{item}}"  bindtap="showBigImg"></image>
+          <view class="close" bindtap="clickDel" data-idx="{{index}}">×</view>
+        </view>
+        <view wx:if="{{tempPath.length<9}}" class="upImgPic" bindtap="addImg">+</view>
+    </view>
+
+    <view class="btnGroup">
+        <button type="primary" form-type="submit" disabled="{{btnShow}}">确认发布</button>
+      <button type="primary" form-type="reset" plain>重置</button>
+      <button type="primary" bindtap = "changeyee" plain>返回</button>
+    </view>
+  
+  </form>
+</view>
